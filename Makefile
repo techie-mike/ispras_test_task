@@ -1,5 +1,6 @@
 # Required packages:
-# clang-11 libstdc++-8-dev gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user
+# Ubuntu 20.04: clang-11 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user
+# Ubuntu 18.04 (change 11 to 10): clang-10 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user
 CC=clang-11
 CXX=clang++-11
 OPT=opt-11

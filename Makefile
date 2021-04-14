@@ -1,5 +1,5 @@
 # Required packages:
-# clang-11 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user
+# clang-11 libstdc++-8-dev gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user
 CC=clang-11
 CXX=clang++-11
 OPT=opt-11
@@ -9,8 +9,8 @@ QEMU_USER=qemu-aarch64
 QEMU_LD_PREFIX=/usr/aarch64-linux-gnu
 BENCH_ARG=21
 
-CFLAGS=-I. -O2 -Werror -Wall -pedantic -fno-inline-functions -fPIC
-CFLAGS_CROSS=-target aarch64-linux-gnu -ffixed-x28
+CFLAGS=-O2 -Werror -Wall -pedantic -fno-inline-functions -fPIC
+CFLAGS_CROSS=-I$(QEMU_LD_PREFIX)/include -target aarch64-linux-gnu -ffixed-x28
 LDLIBS=-lm
 
 BENCH=binary_trees

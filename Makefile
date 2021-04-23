@@ -10,7 +10,7 @@ QEMU_USER=qemu-aarch64
 QEMU_LD_PREFIX=/usr/aarch64-linux-gnu
 BENCH_ARG=21
 
-CFLAGS=-O2 -Werror -Wall -pedantic -fno-inline-functions -fPIC
+CFLAGS=-O2  -Wall -pedantic -fno-inline-functions -fPIC
 CFLAGS_CROSS=-I$(QEMU_LD_PREFIX)/include -target aarch64-linux-gnu -ffixed-x28
 LDLIBS=-lm
 
